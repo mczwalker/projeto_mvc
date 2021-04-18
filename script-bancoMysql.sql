@@ -27,9 +27,9 @@ CREATE TABLE enderecos(
 );
 
 CREATE TABLE contatos(
-	id_contatos int auto_increment not null,
+	id_contatos int auto_increment,
     id_cliente varchar(25),
-	nome varchar(30) not null,
+	nome varchar(30),
     telefone varchar(25),
     email varchar(30),
     PRIMARY KEY(id_contatos),

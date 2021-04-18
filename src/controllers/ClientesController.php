@@ -55,12 +55,15 @@ class ClientesController extends Controller {
                 //Percorre os arrays enviados no input de contatos e salva no banco
                 for($c = count($email_contato)-1; $c >= 0; $c--){
                     echo 'Nome do contato inserido: '.$nome_contato[$c];
-                    Contato::insert([
-                        'id_cliente' => $cpf_cnpj,
-                        'nome' => $nome_contato[$c],
-                        'telefone' => $telefone_contato[$c],
-                        'email' => $email_contato[$c]
-                    ])->execute();
+                    if($nome_contato[$c] && $telefone_contato[$c] && $email_contato[$c]){
+                        Contato::insert([
+                            'id_cliente' => $cpf_cnpj,
+                            'nome' => $nome_contato[$c],
+                            'telefone' => $telefone_contato[$c],
+                            'email' => $email_contato[$c]
+                        ])->execute();
+                    }
+                  
                 }
                     
                 $this->redirect('/');

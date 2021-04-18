@@ -48,10 +48,10 @@
         <a href="#" onclick="adicionar()"><div class="btnPadrao btnAdd">Add novo contato</div></a><br>
         <div id="contatos">
             <label>Nome<br>
-                <input type="text" id="nome-contato" name="nome-contato[]" required></input><br>
+                <input type="text" id="nome-contato" name="nome-contato[]"></input><br>
             </label>
             <label>Telefone<br>
-                <input type="text" id="telefone-contato" name="telefone-contato[]" required></input><br>
+                <input type="text" id="telefone-contato" name="telefone-contato[]"></input><br>
             </label>
             <label>Email<br>
                 <input type="email" id="email-contato" name="email-contato[]"></input><br>
